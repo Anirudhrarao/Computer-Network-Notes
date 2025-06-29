@@ -357,4 +357,174 @@ You → Connect to Wi-Fi
 ```
 
 ---
+# 🌐 **Day 6: Core Protocols (TCP, UDP, HTTP, FTP, ICMP, ARP) Explained with Real Examples**
+---
+## 🚦 Why Protocols?
+
+A **protocol** is a set of rules that decide **how data is transferred** over a network. Just like people need a common language to communicate, devices need protocols.
+
+Type of protocols:
+- TCP
+    
+- UDP
+    
+- HTTP
+    
+- FTP
+    
+- ICMP
+    
+- ARP
+---
+## 1️⃣ **TCP (Transmission Control Protocol)**
+
+- 💬 TCP is **like a phone call** – both sides connect, talk in order, and confirm delivery.
+    
+- 🔄 It uses:
+    
+    - **Three-Way Handshake** (SYN → SYN-ACK → ACK)
+        
+    - **Sequencing** (arrange data chunks)
+        
+    - **Acknowledgement** (confirm delivery)
+        
+    - **Retransmission** (if data is lost)
+    
+- **Key Port**: Depends on the application (e.g., HTTP uses TCP port 80)
+
+| Feature     | Description                                             |
+| ----------- | ------------------------------------------------------- |
+| Type        | **Connection-oriented**                                 |
+| Reliability | Guarantees **data delivery, order, and error checking** |
+| Use Cases   | Web (HTTP), Email, File Transfers                       |
+🧠 **Real Example:**
+
+> When you open Gmail in a browser, the page must load completely and correctly — TCP ensures that every bit of data arrives in the correct order.
+
+---
+## 2️⃣ **UDP (User Datagram Protocol)**
+
+- 🚀 UDP is **like sending a letter** – no confirmation if it arrived.
+    
+- Fast, lightweight, but doesn’t guarantee:
+    
+    - Delivery
+        
+    - Order
+        
+    - Duplicate protection
+    
+- **Key Port**: Varies (e.g., DNS uses UDP port 53)
+
+|Feature|Description|
+|---|---|
+|Type|**Connectionless**|
+|Reliability|No guarantee of delivery or order|
+|Use Cases|Video streaming, VoIP, Gaming|
+
+🧠 **Real Example:**
+
+> When you watch a YouTube video or play PUBG, missing one data packet doesn’t matter — speed is more important than reliability.
+
+---
+## 3️⃣ **HTTP (HyperText Transfer Protocol)**
+
+- 📄 Protocol used to **send webpages, images, text, etc.**
+    
+- Based on **TCP**
+    
+- **Stateless**: Every request is independent
+    
+- **Secure version**: HTTPS (adds encryption via SSL/TLS)
+
+|Feature|Description|
+|---|---|
+|Used for|Browsing websites (text, images, HTML)|
+|Port|80 (unencrypted), 443 (HTTPS – encrypted)|
+|Protocol Type|Application Layer|
+
+🧠 **Real Example:**
+
+> Typing `www.google.com` and seeing the homepage — HTTP handles this text/image transfer from server to your browser.
+
+---
+## 4️⃣ **FTP (File Transfer Protocol)**
+
+- Used to **upload or download files** between client and server
+    
+- Two modes:
+    
+    - **Active mode** (client opens port, server connects back)
+        
+    - **Passive mode** (server opens a port, client connects)
+        
+
+**Requires login**: via username/password or anonymously
+
+**Ports**: 20 (data) and 21 (command)
+
+|Feature|Description|
+|---|---|
+|Used for|Uploading/downloading files|
+|Port|20, 21|
+|Login|Requires username/password (sometimes anonymous)|
+
+🧠 **Real Example:**
+
+> Developers uploading code to a server, or downloading data from a remote site — FTP is commonly used here.
+
+---
+## 5️⃣ **ICMP – Internet Control Message Protocol**
+
+- 📢 Used for sending **network status messages**, **not data**
+    
+- Used in diagnostic tools:
+    
+    - `ping` → Tests reachability
+        
+    - `traceroute` → Shows path to a destination
+        
+
+**Key Idea**: ICMP reports issues (like “host unreachable” or “TTL expired”)
+
+|Feature|Description|
+|---|---|
+|Purpose|Sends **control/error messages** (e.g., unreachable host)|
+|Used by|`ping`, `traceroute`|
+|Type|Network Layer
+
+🧠 **Real Example:**
+
+> When you use the `ping` command to test if a server is up, ICMP sends the echo request and receives the reply.
+
+---
+## 6️⃣ **ARP (Address Resolution Protocol)**
+
+- 🧭 Helps your system **find the MAC address** of another device using its IP.
+    
+- Used within **LANs** (Local Area Networks)
+    
+- Maintains an **ARP table** to store resolved MACs
+    
+
+Example:
+
+> Laptop wants to send data to `192.168.0.20`  
+> → It checks ARP table  
+> → If not found, it broadcasts: "Who has 192.168.0.20?"  
+> → The device replies with its MAC address  
+> → Now the laptop can send Ethernet frame directly
+
+|Feature|Description|
+|---|---|
+|Purpose|Maps **IP address to MAC address**|
+|Works at|Data Link Layer|
+|Role|Helps local delivery of packets within LAN|
+
+🧠 **Real Example:**
+
+> When your laptop sends a packet to your printer (on the same network), it uses ARP to find the printer’s MAC address first.
+
+---
+
 
