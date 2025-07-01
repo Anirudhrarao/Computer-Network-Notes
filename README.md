@@ -527,4 +527,112 @@ Example:
 
 ---
 
+# 🌐 **Day 7: MAC Address, ARP Table, NAT & IP-to-IP Translation Explained**
 
+---
+## 🧾 1. What is a MAC Address?
+
+**MAC = Media Access Control**
+
+- It’s a **unique hardware address** assigned to every device’s **network interface card (NIC)**
+    
+- MACs work at the **Data Link Layer (Layer 2)** of the OSI model
+    
+- Format: `6 pairs of hexadecimal` → e.g., `AA:BB:CC:DD:EE:FF`
+    
+
+🧠 **Real Analogy**:  
+If an IP address is like your home address, your MAC address is like the **door number inside a big apartment**.
+
+📌 MAC addresses:
+
+- Don’t change
+    
+- Are used for communication inside a **local network (LAN)**
+
+---
+## 📜 2. What is an ARP Table?
+
+**ARP = Address Resolution Protocol**
+
+- ARP **maps IP addresses to MAC addresses** within the same network
+    
+- When a device wants to send data to an IP, it asks:
+    
+    > "Who has this IP? Give me their MAC!"
+    
+- The **ARP table** stores this mapping temporarily
+    
+
+📁 **Example of an ARP Table:**
+
+|IP Address|MAC Address|
+|---|---|
+|192.168.0.5|AA:BB:CC:11:22:33|
+|192.168.0.10|44:55:66:77:88:99|
+
+🛠️ You can see it in your system using:
+
+- Windows: `arp -a`
+    
+- Linux/Mac: `ip neigh` or `arp`
+
+---
+## 🌐 3. What is NAT (Network Address Translation)?
+
+**NAT** translates **private IPs to a public IP** so multiple devices can access the internet using **one IP**.
+
+💡 Without NAT, every device at your home would need a public IP — which are limited and costly.
+
+📘 **Why NAT?**
+
+- Saves public IPs
+    
+- Adds a layer of security
+    
+- Enables **many-to-one** mapping (multiple devices to one IP)
+    
+
+📦 **Example:**
+
+- Your laptop (IP: `192.168.0.5`) → Router
+    
+- Router NATs it to public IP: `103.21.55.200`
+    
+- Website sees: request from `103.21.55.200`, not your private IP
+
+---
+### 🔁 Types of NAT
+
+| Type     | Description                                                      |
+| -------- | ---------------------------------------------------------------- |
+| **SNAT** | Source NAT – changes sender’s IP (e.g., local to public)         |
+| **DNAT** | Destination NAT – changes destination IP (e.g., port forwarding) |
+| **PAT**  | Port Address Translation – many-to-one using ports               |
+
+---
+## 🔄 IP-to-IP Translation Flow (with ARP & NAT)
+
+```bash
+Device: 192.168.0.5
+↓
+ARP: Resolve MAC of 192.168.0.1 (router)
+↓
+Sends data → router
+↓
+Router NATs: 192.168.0.5 → 103.21.55.200
+↓
+Sends to destination server on Internet
+```
+
+---
+## ✅ Summary
+
+|Concept|Works At|What It Does|
+|---|---|---|
+|**MAC Address**|Layer 2 (Data Link)|Uniquely identifies a device's NIC|
+|**ARP Table**|Layer 2 ↔ 3|Maps IP to MAC inside LAN|
+|**NAT**|Router Level|Converts private IP to public IP|
+|**IP Translation**|Network Flow|Enables communication from LAN to Internet|
+
+--- 
