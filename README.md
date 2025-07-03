@@ -636,3 +636,133 @@ Sends to destination server on Internet
 |**IP Translation**|Network Flow|Enables communication from LAN to Internet|
 
 --- 
+
+# 🌐 **Day 8 – Network Devices (Router, Switch, Hub, Bridge, Gateway)**
+
+---
+## 🔌 Why Do We Need These Devices?
+
+These devices act like **traffic managers** for networks.  
+Each one has a unique job to do — from **connecting devices**, **forwarding data**, to **linking entire networks or the internet**.
+
+---
+## 📦 1. **Hub** – "The Dumb Distributor"
+
+### 🧠 What it is:
+
+- Basic device that simply **broadcasts** data to **all** connected devices
+    
+- Doesn’t know who should receive it — **no intelligence**
+### 🔁 How it works:
+
+- Sends incoming data to **every port**, even if it’s not needed
+### 📦 Analogy:
+
+> Like shouting in a room hoping the right person hears you
+
+### ❌ Downsides:
+
+- Wastes bandwidth
+    
+- Not secure (everyone sees everything)
+    
+- Rarely used today
+
+---
+## 📦 2. **Switch** – "The Smart Distributor"
+
+### 🧠 What it is:
+
+- More intelligent than a hub
+    
+- Can **learn MAC addresses** and **send data only to the right device**
+### 🔁 How it works:
+
+- Has a **MAC address table**
+    
+- When data comes in, it checks the destination MAC and forwards it only to that port
+### 📦 Analogy:
+
+> Like calling someone by name in a room and giving only _them_ the message
+
+### ✅ Why it’s better:
+
+- Faster
+    
+- Secure
+    
+- Reduces network collisions
+
+> 📌 **Used in LANs**, almost everywhere today
+
+---
+## 📦 3. **Bridge** – "The Divider & Connector"
+
+### 🧠 What it is:
+
+- Used to **connect two different LANs** or divide one into segments
+    
+- Works at the **Data Link Layer (Layer 2)**
+### 🔁 How it works:
+
+- Filters traffic based on MAC addresses
+    
+- Can **reduce collisions** and segment networks logically
+### 📦 Analogy:
+
+> Like a **bouncer** who checks if someone belongs on one side of the club or the other
+
+---
+## 📦 4. **Router** – "The Internet Connector"
+
+### 🧠 What it is:
+
+- Used to **connect different networks** (LAN to WAN, home to internet)
+    
+- Works at the **Network Layer (Layer 3)**
+    
+- **Forwards packets based on IP addresses**
+### 🔁 How it works:
+
+- Has a **routing table**
+    
+- Decides the **best path** to send data to a remote network
+### 📦 Analogy:
+
+> Like Google Maps — it checks the best route for your data to reach its destination
+### 📱 Examples:
+
+- Home Wi-Fi routers
+    
+- Internet gateways in companies
+
+---
+## 📦 5. **Gateway** – "The Protocol Converter"
+
+### 🧠 What it is:
+
+- Connects networks **using different protocols**
+    
+- Works from **Layer 4 to Layer 7**
+    
+- Translates data between **different systems**
+### 📦 Analogy:
+
+> Like a **translator** between two people speaking different languages
+### 🌐 Use case:
+
+- Connecting a LAN using TCP/IP to a network using a different protocol
+
+---
+# 🧾 Summary Table
+
+| Device      | Layer          | Intelligence     | Main Job                | Use Case                   |
+| ----------- | -------------- | ---------------- | ----------------------- | -------------------------- |
+| **Hub**     | Physical (L1)  | ❌ None           | Broadcasts to all       | Old LANs                   |
+| **Switch**  | Data Link (L2) | ✅ MAC-based      | Sends to correct device | All LANs today             |
+| **Bridge**  | Data Link (L2) | ✅ Segments LAN   | Joins/splits LANs       | Reduces collision          |
+| **Router**  | Network (L3)   | ✅ IP-based       | Connects networks       | LAN ↔ Internet             |
+| **Gateway** | L4–L7          | ✅ Protocol-based | Translates protocols    | Enterprise/Hybrid networks |
+
+---
+
