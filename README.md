@@ -766,3 +766,106 @@ Each one has a unique job to do — from **connecting devices**, **forwarding da
 
 ---
 
+# 🌐 **Day 9: Routing & Switching Basics**
+
+---
+## 🧭 1. What is Routing?
+
+> **Routing** is the process of finding the best path for data packets to travel from source to destination **across networks**.
+
+### 🧠 Real-Life Analogy:
+
+Imagine you’re sending a courier from Mumbai to Delhi. You want it to take the **shortest and fastest** route — that’s what a **router** does for data.
+
+- Routers use **routing tables** to decide which path to forward data.
+    
+- Works at **Layer 3 (Network Layer)** of OSI Model
+---
+## 🔁 2. Static vs Dynamic Routing
+
+|Feature|Static Routing|Dynamic Routing|
+|---|---|---|
+|Added By|Network admin manually|Routers auto-discover routes|
+|Routing Table|Fixed|Updates automatically|
+|Adaptability|❌ Cannot adapt to failure|✅ Can reroute during failure|
+|Complexity|Simple for small networks|Better for large, growing networks|
+|Protocols Used|No protocol needed|RIP, OSPF, EIGRP, BGP|
+|Example Use|Home/small office setup|ISP, large enterprise networks|
+
+---
+### ✅ Easy Trick to Remember:
+
+> 🛣️ **Static** = Manual map  
+> 🚦 **Dynamic** = Google Maps live traffic updates
+
+---
+## 🔄 3. What is Switching?
+
+> **Switching** is the process of forwarding data **within the same network (LAN)** using **MAC addresses**.
+
+Switching is handled by **switches** at **Layer 2 (Data Link Layer)**.
+
+---
+## 📦 4. Types of Switching Techniques
+
+### a) **Circuit Switching**
+
+- A dedicated path is established before communication starts
+    
+- Example: Traditional telephone call
+    
+- Reliable but **wastes bandwidth**
+### b) **Packet Switching**
+
+- Data is broken into **packets** and sent independently
+    
+- Each packet may take a different route
+    
+- Example: **Internet (TCP/IP)**
+    
+- Most efficient and commonly used
+### c) **Message Switching**
+
+- Entire message is stored at intermediate nodes (store-and-forward)
+    
+- Not suitable for real-time
+    
+- Used in **older telecommunication** systems
+---
+### ✅ Trick to Remember:
+
+|Type|Keyword|Modern?|Analogy|
+|---|---|---|---|
+|Circuit Switching|Fixed path|❌|Landline call 📞|
+|Packet Switching|Flex route|✅|WhatsApp messages 📲|
+|Message Switching|Store & forward|❌|Post office storing letters 📬|
+
+---
+## 📤 5. Unicast, Broadcast, Multicast
+
+| Term          | Meaning                       | Example                         |
+| ------------- | ----------------------------- | ------------------------------- |
+| **Unicast**   | One-to-One                    | Sending a file to your friend   |
+| **Broadcast** | One-to-All (in network)       | ARP request: “Who has this IP?” |
+| **Multicast** | One-to-Many (selective group) | Live sports streaming           |
+### 🔁 Visual Understanding:
+
+``` bash
+Unicast   → You whisper to one friend 
+Broadcast → You shout to everyone 
+Multicast → You speak to a selected group (e.g., gaming team)
+```
+
+---
+## 🧾 Summary Chart
+
+| Concept       | Layer      | Used For            | Key Address Type      |
+| ------------- | ---------- | ------------------- | --------------------- |
+| **Routing**   | Layer 3    | Between networks    | IP Address            |
+| **Switching** | Layer 2    | Inside a LAN        | MAC Address           |
+| **Unicast**   | All Layers | 1-to-1              | Destination address   |
+| **Broadcast** | Layer 2    | 1-to-all in LAN     | FF:FF:FF:FF:FF:FF     |
+| **Multicast** | Layer 3    | 1-to-selected group | Special multicast IPs |
+
+---
+
