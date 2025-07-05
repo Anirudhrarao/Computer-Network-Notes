@@ -868,4 +868,140 @@ Multicast → You speak to a selected group (e.g., gaming team)
 | **Multicast** | Layer 3    | 1-to-selected group | Special multicast IPs |
 
 ---
+# 🌐 **Day 10 – Network Topologies + Transmission Modes**
 
+---
+## 📶 Part 1: **Network Topologies**
+
+A **topology** defines how computers/devices are **physically or logically connected** in a network.
+
+---
+### 📦 1. **Bus Topology** – "Single Cable Line"
+
+|Feature|Description|
+|---|---|
+|Structure|All devices share **one main cable** (backbone)|
+|Pros|Easy to set up, cheap|
+|Cons|If cable breaks → whole network fails|
+|Used in|Older LANs|
+
+🔌 **Analogy**: One main pipe. All devices are taps connected to it.
+
+---
+### 📦 2. **Star Topology** – "Central Hub or Switch"
+
+|Feature|Description|
+|---|---|
+|Structure|All devices connect to a **central device** (switch/hub)|
+|Pros|Easy to manage, failure of one device doesn’t affect others|
+|Cons|If central device fails → entire network fails|
+|Used in|Modern LANs|
+
+⭐ **Analogy**: Like a **wheel** — center is the hub, spokes are devices.
+
+---
+### 📦 3. **Ring Topology** – "Circular Path"
+
+|Feature|Description|
+|---|---|
+|Structure|Devices form a **loop**, each connected to two neighbors|
+|Pros|Predictable data flow|
+|Cons|One failure breaks the whole ring|
+|Used in|Some older token-based networks|
+
+🔁 **Analogy**: Like passing a note around a circle of people — if one person leaves, the note can’t go further.
+
+---
+### 📦 4. **Mesh Topology** – "All-to-All Connection"
+
+|Feature|Description|
+|---|---|
+|Structure|**Every device** is connected to **every other device**|
+|Pros|Very reliable, no single point of failure|
+|Cons|Expensive, complex|
+|Used in|High-reliability setups (e.g., military, servers)|
+
+🕸️ **Analogy**: Everyone in a room can directly talk to everyone else.
+
+---
+
+### 📦 5. **Hybrid Topology** – "Combination of Types"
+
+| Feature   | Description                                      |
+| --------- | ------------------------------------------------ |
+| Structure | Mix of two or more topologies (e.g., star + bus) |
+| Pros      | Flexible                                         |
+| Cons      | Complex to manage                                |
+| Used in   | Enterprise networks, schools                     |
+
+🔧 **Analogy**: A smart building with different floors using different layouts.
+
+---
+
+## ✅ Topology Comparison Table
+
+|Topology|Cable Use|Reliability|Cost|Real Use|
+|---|---|---|---|---|
+|Bus|Low|Low|Cheap|Rare today|
+|Star|Moderate|High|Moderate|Common|
+|Ring|Moderate|Medium|Moderate|Rare now|
+|Mesh|High|Very High|Expensive|Special use|
+|Hybrid|Varies|High|High|Modern enterprise|
+
+---
+### 💡 Easy Trick to Remember:
+
+> 🚌 **Bus** = One road  
+> ⭐ **Star** = Central hub  
+> 🔁 **Ring** = Loop  
+> 🕸️ **Mesh** = Everyone talks to everyone  
+> 🧩 **Hybrid** = Mix
+
+---
+## 🔁 Part 2: **Transmission Modes**
+
+These define **how data flows** between sender and receiver.
+
+---
+### 1️⃣ **Simplex Mode** – "One-way Only"
+
+|Feature|Description|
+|---|---|
+|Direction|Only one direction|
+|Example|Keyboard to computer, radio|
+|Use Case|Sensors, unidirectional data flow|
+
+📢 **Analogy**: Radio station — they speak, you just listen.
+
+---
+### 2️⃣ **Half-Duplex Mode** – "Two-way, but One at a Time"
+
+|Feature|Description|
+|---|---|
+|Direction|Two-way but not simultaneously|
+|Example|Walkie-Talkies|
+|Use Case|Older Ethernet, CB radios|
+
+🎤 **Analogy**: One person speaks at a time — "Over."
+
+---
+### 3️⃣ **Full-Duplex Mode** – "Two-way, at Same Time"
+
+|Feature|Description|
+|---|---|
+|Direction|Two-way, simultaneously|
+|Example|Phone call, modern LAN|
+|Use Case|Internet communication, video calls|
+
+📞 **Analogy**: Normal phone call — both can talk at once.
+
+---
+## ✅ Transmission Mode Table
+
+| Mode        | Direction              | Example         | Speed  |
+| ----------- | ---------------------- | --------------- | ------ |
+| Simplex     | One-way                | Keyboard, radio | Slow   |
+| Half-Duplex | Two-way (alternate)    | Walkie-talkie   | Medium |
+| Full-Duplex | Two-way (simultaneous) | Phone, Zoom     | Fast   |
+
+---
