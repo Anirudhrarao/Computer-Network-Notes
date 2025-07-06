@@ -1139,3 +1139,377 @@ An **IPS** not only detects threats (like IDS) but also **takes action to block 
 - Always use **strong passwords** and **MFA (multi-factor authentication)**
 
 ---
+
+# 🧠 **Day 12 – Final Recap + Interview Cheat sheet + Practice Questions **
+
+---
+## 🧩 **1. OSI vs TCP/IP Model (Day 1 & 2)**
+
+| Layer (OSI)     | Description                    | TCP/IP Equivalent |
+| --------------- | ------------------------------ | ----------------- |
+| 7. Application  | Interface for apps (HTTP, FTP) | Application       |
+| 6. Presentation | Encoding, encryption           | Application       |
+| 5. Session      | Manages sessions               | Application       |
+| 4. Transport    | End-to-end delivery (TCP/UDP)  | Transport         |
+| 3. Network      | IP addressing, routing         | Internet          |
+| 2. Data Link    | MAC addressing                 | Network Access    |
+| 1. Physical     | Wires, signals                 | Network Access    |
+
+✅ **Tip to remember OSI layers**:  
+**"Please Do Not Throw Sausage Pizza Away"**  
+(P = Physical, D = Data Link...)
+
+---
+
+## 📍 **2. IP Addressing & Subnetting (Day 3–4)**
+
+- **IPv4** = 32 bits (e.g., `192.168.1.1`)
+    
+- **Private IPs** (used within LAN):
+    
+    - 10.0.0.0 – 10.255.255.255
+        
+    - 172.16.0.0 – 172.31.255.255
+        
+    - 192.168.0.0 – 192.168.255.255
+        
+- **Public IP** = Accessible on internet
+    
+- **CIDR Notation**: `/24` → 255.255.255.0 → 256 IPs
+    
+
+✅ Tip:  
+**Public = Outside World**  
+**Private = Inside Your Home or Office**
+
+---
+
+## 🔧 **3. IP Classes & Default Subnets (Day 4)**
+
+|Class|Starting IP|Default Subnet|Hosts|
+|---|---|---|---|
+|A|1.0.0.0|255.0.0.0 (/8)|~16M|
+|B|128.0.0.0|255.255.0.0 (/16)|~65K|
+|C|192.0.0.0|255.255.255.0 (/24)|254|
+
+✅ Tip:  
+**Class A → Large**  
+**Class B → Medium**  
+**Class C → Small**
+
+---
+
+## 🔄 **4. Static vs Dynamic IP, DHCP, DNS (Day 5)**
+
+|Term|Description|
+|---|---|
+|**Static IP**|Manual, fixed, used in servers|
+|**Dynamic IP**|Assigned by **DHCP** (Dynamic Host Config Protocol)|
+|**DNS**|Converts domain names to IP (like a phonebook)|
+
+✅ Tip:  
+**DNS = Domain → Number System**
+
+---
+
+## 📡 **5. Protocols (TCP, UDP, HTTP, ARP...) (Day 6)**
+
+|Protocol|Use Case|Reliable?|Layer|
+|---|---|---|---|
+|TCP|Web, Email|✅ Yes|Transport|
+|UDP|Streaming, Games|❌ No|Transport|
+|HTTP|Webpages|Built on TCP|Application|
+|ARP|IP → MAC lookup|N/A|Link|
+|ICMP|Ping, errors|N/A|Network|
+
+✅ Tip:  
+**TCP = Telephone call**  
+**UDP = YouTube streaming**
+
+---
+
+## 🧱 **6. MAC, ARP Table, NAT (Day 7)**
+
+- **MAC Address** = Unique ID for each device (Layer 2)
+    
+- **ARP Table** = Stores IP ↔ MAC mapping
+    
+- **NAT** = Converts private IP ↔ public IP
+    
+
+✅ Tip:  
+**MAC = Local Identity**  
+**NAT = Translator to the Internet**
+
+---
+
+## 🔌 **7. Network Devices (Day 8)**
+
+|Device|Works on|Role|
+|---|---|---|
+|Hub|Layer 1|Broadcasts to all|
+|Switch|Layer 2|Forwards using MAC|
+|Router|Layer 3|Routes using IP|
+|Gateway|Layer 4–7|Translates protocols|
+
+✅ Tip:  
+**Switch = Smart Hub**  
+**Router = GPS for Internet**
+
+---
+
+## 🔁 **8. Routing & Switching (Day 9)**
+
+- **Routing** = Between networks (IP-based)
+    
+- **Switching** = Within LAN (MAC-based)
+    
+- **Static Routing** = Manual
+    
+- **Dynamic Routing** = Auto (RIP, OSPF)
+    
+- **Unicast** = One-to-one
+    
+- **Broadcast** = One-to-all
+    
+- **Multicast** = One-to-group
+    
+
+---
+
+## 🕸️ **9. Topologies + Transmission Modes (Day 10)**
+
+|Topology|Shape|Used In|
+|---|---|---|
+|Bus|One line|Rare today|
+|Star|Central Hub|Home LANs|
+|Ring|Loop|Legacy|
+|Mesh|All-to-all|High-security|
+|Hybrid|Mixed|Enterprises|
+
+|Mode|Direction|Example|
+|---|---|---|
+|Simplex|One-way|Radio|
+|Half-Duplex|Two-way (1 at a time)|Walkie-talkie|
+|Full-Duplex|Two-way (both)|Zoom, Phone|
+
+---
+
+## 🔐 **10. Firewalls, VPN, IDS/IPS (Day 11)**
+
+|Tool|Function|
+|---|---|
+|Firewall|Block/allow traffic|
+|VPN|Encrypts your traffic|
+|IDS|Detects & alerts|
+|IPS|Detects & blocks|
+
+✅ Tip:  
+**IDS = Alarm 🚨, IPS = Bodyguard 🛡️**
+
+---
+# ✅ **Top 30 CN Interview Questions with Short & Clear Answers**
+---
+### 🔌 **Basics & Devices**
+
+1. **What’s the difference between switch and hub?**
+    
+    - **Hub**: Broadcasts to all devices (Layer 1).
+        
+    - **Switch**: Sends only to target device using MAC address (Layer 2).
+        
+2. **What is a router?**
+    
+    - A device that routes data between **different networks** using **IP addresses** (Layer 3).
+        
+3. **What is a gateway?**
+    
+    - A device that **translates protocols** between different networks (Layer 4–7).
+        
+4. **What is the MAC address?**
+    
+    - A **unique hardware ID** assigned to the device’s NIC. Works at **Layer 2**.
+        
+5. **What is the difference between LAN and WAN?**
+    
+    - **LAN**: Local (office/home).
+        
+    - **WAN**: Wide (Internet).
+        
+
+---
+
+### 🌐 **IP Addressing, Subnetting, NAT**
+
+6. **What is an IP address?**
+    
+    - A unique identifier for a device on a network (IPv4: 32-bit, e.g. `192.168.1.1`).
+        
+7. **What’s the difference between public and private IP?**
+    
+    - **Public**: Reachable over internet.
+        
+    - **Private**: Used inside LAN (not internet-routable).
+        
+8. **What is subnetting?**
+    
+    - Dividing a network into **smaller logical subnets** to improve efficiency and security.
+        
+9. **How does NAT work?**
+    
+    - **Translates private IP ↔ public IP**, allowing multiple devices to share one public IP.
+        
+10. **What is CIDR notation?**
+    
+
+- A format like `192.168.0.1/24`, where `/24` indicates subnet mask length (bits for network).
+    
+
+---
+
+### 📶 **OSI & TCP/IP Models**
+
+11. **How many layers in OSI model?**
+    
+
+- 7 layers (Physical to Application).
+    
+
+12. **How many layers in TCP/IP model?**
+    
+
+- 4 layers (Network Access, Internet, Transport, Application).
+    
+
+13. **What does the Transport layer do?**
+    
+
+- Provides **end-to-end delivery** using TCP or UDP.
+    
+
+14. **Which layer handles routing?**
+    
+
+- **Network layer** (Layer 3).
+    
+
+15. **What is the difference between TCP and UDP?**
+    
+
+- **TCP**: Reliable, connection-based (e.g., web, email).
+    
+- **UDP**: Fast, no guarantee (e.g., streaming, games).
+    
+
+---
+
+### 🔐 **Network Security**
+
+16. **What is a firewall?**
+    
+
+- A system that filters **incoming/outgoing traffic** based on rules.
+    
+
+17. **What is a VPN?**
+    
+
+- **Encrypted tunnel** for secure communication over public networks.
+    
+
+18. **What is IDS and IPS?**
+    
+
+- **IDS**: Detects and alerts on intrusions.
+    
+- **IPS**: Detects and **blocks** malicious traffic.
+    
+
+19. **How does DNS work?**
+    
+
+- **Translates domain names** (e.g., google.com) to IP addresses.
+    
+
+20. **What is ARP?**
+    
+
+- Resolves an **IP address to a MAC address** on a LAN.
+    
+
+---
+
+### 📡 **Data Flow & Communication**
+
+21. **What is a packet?**
+    
+
+- A **chunk of data** sent over a network.
+    
+
+22. **What is ping used for?**
+    
+
+- To **check connectivity** between two devices using **ICMP**.
+    
+
+23. **What are Unicast, Broadcast, and Multicast?**
+    
+
+- **Unicast**: One-to-one
+    
+- **Broadcast**: One-to-all
+    
+- **Multicast**: One-to-selected group
+    
+
+24. **What is a port?**
+    
+
+- A **logical endpoint** for communication (e.g., HTTP → port 80).
+    
+
+25. **What is the difference between HTTP and HTTPS?**
+    
+
+- **HTTP**: Unencrypted
+    
+- **HTTPS**: Encrypted via SSL/TLS
+    
+
+---
+
+### 🧱 **Protocols & Transmission**
+
+26. **What is ARP table?**
+    
+
+- Stores **IP–MAC mappings**.
+    
+
+27. **What is packet switching?**
+    
+
+- Data is split into **packets** and sent independently over different paths.
+    
+
+28. **What is circuit switching?**
+    
+
+- A **dedicated path** is set before transmission begins (like old telephony).
+    
+
+29. **What are transmission modes?**
+    
+
+- **Simplex** (one-way),
+    
+- **Half-duplex** (two-way, alternate),
+    
+- **Full-duplex** (two-way, simultaneous)
+    
+
+30. **What happens when you type google.com in your browser?**
+    
+
+- DNS lookup → IP resolved → TCP connection → HTTP request → Response rendered.
