@@ -1005,3 +1005,137 @@ These define **how data flows** between sender and receiver.
 | Full-Duplex | Two-way (simultaneous) | Phone, Zoom     | Fast   |
 
 ---
+# 🔒 **Day 11 – Firewalls, VPN, IDS/IPS & Network Security Basics**
+
+---
+## 🛡️ Why Network Security Matters?
+
+Everything you’ve learned so far (IP, routing, switching, etc.) enables **communication**.
+
+Now, we need to protect that communication from:
+
+- Hackers 👨‍💻
+    
+- Malware 🐛
+    
+- Data leaks 🔓
+    
+- Unauthorized access🚫
+---
+## 🧱 1. **Firewall – The Security Gate**
+
+### 🔥 What is it?
+
+A **firewall** is a **security system** that monitors and controls **incoming and outgoing network traffic** based on predefined rules.
+
+> 🧠 **Analogy:** Like a **bouncer** at a club door — only lets in people (packets) who meet the rules.
+
+---
+### 🔐 Types of Firewalls:
+
+|Type|Works At|Description|
+|---|---|---|
+|**Packet Filtering**|Network Layer (L3)|Filters packets by IP, port|
+|**Stateful**|Transport Layer (L4)|Keeps track of active connections|
+|**Application Layer**|Layer 7|Filters traffic by application (e.g., HTTP, FTP)|
+
+--- 
+### ✅ Example Rules:
+
+- Allow: traffic from `192.168.1.5` on port `80`
+    
+- Block: all traffic from unknown IPs on port `22`
+
+---
+### 🧠 Memory Tip:
+
+> **Firewall = First wall of defense**
+
+---
+
+## 🛜 2. **VPN – Virtual Private Network**
+
+### 🌐 What is it?
+
+A **VPN** creates a **secure, encrypted tunnel** between your device and the internet.
+
+> 🧠 **Analogy:** Like a **private highway** no one else can see into — not even your ISP.
+
+---
+
+### ✅ Why Use a VPN?
+
+- Encrypts internet traffic
+    
+- Hides your IP address
+    
+- Allows access to region-locked websites
+    
+- Protects data over public Wi-Fi
+
+---
+
+### 🧠 Memory Tip:
+
+> **VPN = Very Private Network**
+
+---
+## 👁️ 3. **IDS – Intrusion Detection System**
+
+### 🕵️ What is it?
+
+An **IDS** monitors your network and **alerts** you if it detects suspicious or malicious activity.
+
+> 📢 Think of it like a **burglar alarm** — it doesn't stop the attack but tells you **something's wrong**.
+
+---
+### ✅ Example:
+
+- Notifies you if a user is sending **unusually large amounts of data**
+    
+- Detects port scanning, brute-force attempts, etc.
+
+---
+## 🚨 4. **IPS – Intrusion Prevention System**
+
+### 🛑 What is it?
+
+An **IPS** not only detects threats (like IDS) but also **takes action to block or stop** the malicious traffic.
+
+> 🧠 Analogy: **IDS = security camera**, **IPS = camera with laser guns 😄**
+
+---
+### 📊 IDS vs IPS
+
+|Feature|IDS (Detect)|IPS (Prevent)|
+|---|---|---|
+|Response|Alerts only|Blocks/Stops traffic|
+|Control|Passive|Active|
+|Use Case|Monitor traffic trends|Stop attacks in real-time|
+
+---
+
+## 🧠 Summary Table
+
+|Tool|What It Does|Real-World Role|
+|---|---|---|
+|**Firewall**|Filters traffic using rules|First line of defense|
+|**VPN**|Encrypts your connection|Secure remote access, anonymity|
+|**IDS**|Detects threats, alerts only|Traffic monitoring|
+|**IPS**|Detects + blocks threats automatically|Real-time protection|
+
+---
+
+## ✅ Network Security Best Practices
+
+- Use **firewalls** at both network and host level
+    
+- Use **VPN** when working remotely or using public Wi-Fi
+    
+- Enable **IPS/IDS** for real-time threat protection
+    
+- Keep OS, routers, and firewalls **up to date**
+    
+- Always use **strong passwords** and **MFA (multi-factor authentication)**
+
+---
