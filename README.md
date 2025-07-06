@@ -1,4 +1,23 @@
 # Computer Network 💻
+
+## 📚 Complete Computer Networking Guide for Developers
+
+> This guide contains 12 days of structured, easy-to-understand Computer Networking notes for developers, including real-world examples, and interview prep. Open-source and collaborative!
+
+### 📌 What This Guide Covers:
+- 🌐 **Day 1:** OSI Model – 7-layer model explained with mnemonic & real-life examples
+- 🌐 **Day 2:** TCP/IP Model – Practical layer stack & comparison with OSI
+- 🌐 **Day 3:** IP Addressing + Subnetting – IPv4 basics, public/private IPs, subnet masks
+- 🌐 **Day 4:** IP Classes + Default Subnets + Practice – Class A/B/C ranges and practice
+- 🌐 **Day 5:** Static vs Dynamic IP + DHCP + DNS – How devices get IPs & how DNS maps names to IPs
+- 🌐 **Day 6:** Core Protocols – TCP, UDP, HTTP, FTP, ICMP, ARP with use cases
+- 🌐 **Day 7:** MAC Address, ARP Table, NAT – LAN-level addressing and IP translation
+- 🌐 **Day 8:** Networking Devices – Router, Switch, Hub, Bridge, Gateway and their uses
+- 🌐 **Day 9:** Routing & Switching – Static vs Dynamic Routing, Circuit vs Packet Switching
+- 🌐 **Day 10:** Network Topologies + Transmission Modes – Mesh, Star, Bus & Duplex Modes
+- 🔒 **Day 11:** Firewalls, VPN, IDS/IPS – Network protection layers made easy
+- 🧠 **Day 12:** Final Recap + Cheat Sheet – Summary + 30 Interview Questions
+
 ---
 ### ✅ 1. What is a Computer Network?
 
